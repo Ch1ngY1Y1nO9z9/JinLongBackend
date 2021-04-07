@@ -38,55 +38,50 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
 // 網站後台
-Route::middleware(['auth','role'])->prefix('admin')->group(function () {
+Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/', 'HomeController@index');
 
     //SEO設定
     Route::get('seo', 'SeoController@index');
-    Route::post('seo/{id}', 'SeoController@update');
+    Route::post('seo', 'SeoController@update');
 
-    //首頁
-    //-橫幅管理
-    Route::resource('arounds', 'AroundsController');
-    Route::resource('banners', 'BannersController');
-    //-友站連結
-    Route::resource('friendships', 'FriendshipsController');
+    // Banner
+    Route::get('banner','BannerController@index');
+    Route::get('banner/create','BannerController@create');
+    Route::post('banner/store', 'BannerController@store');
+    Route::get('banner/edit/{id}', 'BannerController@edit');
+    Route::post('banner/update/{id}', 'BannerController@update');
+    Route::post('banner/delete/{id}', 'BannerController@delete');
 
-    //校園公告
-    Route::resource('news_types', 'NewsTypeController');
-    Route::resource('news', 'NewsController');
-    Route::post('news/delNewsFile', 'NewsController@deleteFile');
+    // 最新消息
+    Route::get('/news','NewsController@index');
+    Route::get('news/create','NewsController@create');
+    Route::post('news/store', 'NewsController@store');
+    Route::get('news/edit/{id}', 'NewsController@edit');
+    Route::post('news/update/{id}', 'NewsController@update');
+    Route::post('news/delete/{id}', 'NewsController@delete');
 
-    //榮譽榜
-    Route::resource('honors_types', 'HonorsTypeController');
-    Route::resource('honors', 'HonorsController');
-    Route::post('honors/delHonorsFile', 'HonorsController@deleteFile');
+    //聯絡我們管理
+    Route::get('contact','ContactController@index');
+    Route::get('contact/{id}','ContactController@show');
+    Route::post('contact/delete/{id}','ContactController@delete');
+    Route::post('contact/delete_all/','ContactController@delete_all')->name('clear_contact');
 
-    //金湖剪影
-    //-相簿類型
-    Route::resource('photo_albums_types', 'PhotoAlbumsTypeController');
-    Route::resource('photo_albums', 'PhotoAlbumsController');
-    Route::resource('photos', 'PhotosController');
-    //-相簿類型
-    Route::resource('videos_types', 'VideosTypeController');
-    Route::resource('videos', 'VideosController');
+    //產品類別管理
+    Route::get('product_type','ProductTypeController@index');
+    Route::get('product_type/create','ProductTypeController@create');
+    Route::post('product_type/store', 'ProductTypeController@store');
+    Route::get('product_type/edit/{id}', 'ProductTypeController@edit');
+    Route::post('product_type/update/{id}', 'ProductTypeController@update');
+    Route::post('product_type/delete/{id}', 'ProductTypeController@delete');
 
-    //行政分機
-    Route::resource('offices_types', 'OfficesTypeController');
-    Route::resource('telephones_contacts', 'TelephonesContactController');
-    Route::resource('telephones_types', 'TelephonesTypeController');
-    Route::resource('telephones', 'TelephonesController');
-
-    //聯絡我們系統
-    Route::resource('contacts', 'ContactsController');
-
-    //帳號管理
-    Route::resource('members', 'MembersController');
-
-    //測試
-    Route::get('test_page', 'TestUploadController@index');
-    Route::post('test_upload', 'TestUploadController@upload');
-
+    //產品管理
+    Route::get('products','ProductsController@index');
+    Route::get('products/create','ProductsController@create');
+    Route::post('products/store', 'ProductsController@store');
+    Route::get('products/edit/{id}', 'ProductsController@edit');
+    Route::post('products/update/{id}', 'ProductsController@update');
+    Route::post('products/delete/{id}', 'ProductsController@delete');
 });
 
 Auth::routes();
