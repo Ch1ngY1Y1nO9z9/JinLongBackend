@@ -51,12 +51,12 @@
 @endsection
 
 @section('js')
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" defer></script>
+<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js" defer></script>
     <script>
         $(document).ready(function() {
             $('#example').DataTable({
-                order: [[ 3, 'desc' ]],
+                order: [[ 2, 'desc' ]],
                 language:{
                     "processing":   "處理中...",
                     "loadingRecords": "載入中...",
@@ -82,12 +82,17 @@
 
             $('#example').on('click','.btn-danger',function(){
                 event.preventDefault();
-                var r = confirm("你確定要刪除此項目嗎?");
+                var r = confirm("你確定要刪除此項目嗎? 刪除此分類會需要重新設定相關產品的產品分類!");
                 if (r == true) {
                     var itemid = $(this).data("itemid");
                     $(`.destroy-form[data-itemid="${itemid}"]`).submit();
                 }
             });
-        } );
+        });
     </script>
+    @if(Session::has('message'))
+        <script>
+            alert('更新成功!')
+        </script>
+    @endif
 @endsection

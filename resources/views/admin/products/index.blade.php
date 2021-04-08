@@ -61,8 +61,8 @@
 @endsection
 
 @section('js')
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" defer></script>
+<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js" defer></script>
     <script>
         $(document).ready(function() {
             $('#example').DataTable({
@@ -100,4 +100,10 @@
             });
         } );
     </script>
+
+    @if(Session::has('message'))
+        <script>
+            alert('更新成功!')
+        </script>
+    @endif
 @endsection

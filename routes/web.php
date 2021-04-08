@@ -36,6 +36,8 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
+Route::get('/admin', 'HomeController@index')->name('home');
+
 
 // 網站後台
 Route::middleware(['auth'])->prefix('admin')->group(function () {
@@ -83,11 +85,3 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::post('products/update/{id}', 'ProductsController@update');
     Route::post('products/delete/{id}', 'ProductsController@delete');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
