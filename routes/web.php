@@ -14,11 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 // 網站前台
-Route::get('/', function () {
-    return view('/welcome');
-})->name('index');
-// Route::get('/', 'FrontController@index');
+// Route::get('/', function () {
+//     return view('/welcome');
+// })->name('index');
+Route::get('/', 'FrontController@redirectToCh');
+Route::get('/ch', 'FrontController@index');
+Route::get('/en', 'FrontController@index_en');
 Route::post('/contact_us', 'FrontController@contact_us');
+
+Route::get('/news/{id}', 'FrontController@news');
 
 // Auth::routes();
 // Authentication Routes...

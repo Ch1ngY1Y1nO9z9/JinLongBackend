@@ -21,6 +21,6 @@ class ContactController extends Controller
         $items = ContactUs::find($id);
         $items->delete();
 
-        return redirect()->back();
+        return redirect('/admin/contact')->with('message','成功!');
     }
 }

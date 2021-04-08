@@ -15,7 +15,7 @@
                     聯絡我們-管理
                 </h4>
                 <div class="card-body">
-                    <table id="table" class="table table-bordered table-striped table-hover">
+                    <table id="example" class="table table-bordered table-striped table-hover">
                         <thead>
                         <tr>
                             <th>姓名</th>
@@ -34,8 +34,11 @@
                                 <td>{{$list->created_at}}</td>
                                 <td>
                                     <a class="btn btn-sm btn-success" href="/admin/contact/{{$list->id}}">查看更多</a>
-                                    <button class="btn btn-sm btn-danger" data-listid="{{$list->id}}">刪除</button>
-                                    <form class="delete-form" action="/admin/contact/delete/{{$list->id}}" method="POST" style="display: none;" data-listid="{{$list->id}}">
+                                    <a class="btn btn-danger btn-sm" href="#" data-itemid="{{$list->id}}">刪除</a>
+
+                                    <form class="destroy-form" data-itemid="{{$list->id}}"
+                                          action="/admin/contact/delete/{{$list->id}}" method="POST"
+                                          style="display: none;">
                                         @csrf
                                     </form>
                                 </td>
@@ -51,17 +54,17 @@
 @endsection
 
 @section('js')
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" defer></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" defer></script>
 
-    <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js" defer></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" defer></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js" defer></script>
+
+    {{-- <script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js" defer></script>
     <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.bootstrap4.min.js" defer></script>
     <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" defer></script> --}}
 <script>
     $(document).ready(function() {
-        var table = $('#table').DataTable({
+        var table = $('#example').DataTable({
             "order": [[0,'desc']],
             buttons: [
                     {
@@ -77,15 +80,23 @@
                     }
                 ]
         });
-        table.buttons().container().appendTo( '#table_wrapper .col-md-6:eq(0)');
+        // table.buttons().container().appendTo( '#table_wrapper .col-md-6:eq(0)');
+
+        $('#example').on('click','.btn-danger',function(){
+                event.preventDefault();
+                var r = confirm("你確定要刪除此信件嗎?");
+                if (r == true) {
+                    var itemid = $(this).data("itemid");
+                    $(`.destroy-form[data-itemid="${itemid}"]`).submit();
+                }
+            });
     } );
 
-    $('.btn-danger').click(function(){
-            var listid = $(this).data("listid");
-            if (confirm('確定要刪除此信件？')){
-                event.preventDefault();
-                $('.delete-form[data-listid="' + listid + '"]').submit();
-            }
-        });
 </script>
+
+    @if(Session::has('message'))
+        <script>
+            alert('更新成功!')
+        </script>
+    @endif
 @endsection

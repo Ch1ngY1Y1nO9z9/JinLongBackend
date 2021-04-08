@@ -17,6 +17,8 @@ class CreateProductsTypeTable extends Migration
             $table->id();
             $table->string('type_name_ch')->nullable();
             $table->string('type_name_en')->nullable();
+            $table->string('img')->nullable();
+            $table->integer('sort');
             $table->timestamps();
         });
     }

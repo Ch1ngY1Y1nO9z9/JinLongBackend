@@ -22,8 +22,6 @@
                                 <th>圖片</th>
                                 <th>標題(中)</th>
                                 <th>標題(英)</th>
-                                <th>內容(中)</th>
-                                <th>內容(英)</th>
                                 <th>日期</th>
                                 <th>Sort</th>
                                 <th width="80">功能</th>
@@ -35,8 +33,6 @@
                                     <td><img src="{{$news->img}}" width="200" alt=""></td>
                                     <td>{{$news->title_ch}}</td>
                                     <td>{{$news->title_en}}</td>
-                                    <td>{{$news->content_ch}}</td>
-                                    <td>{{$news->content_en}}</td>
                                     <td>{{$news->date}}</td>
                                     <td>{{$news->sort}}</td>
                                     <td>

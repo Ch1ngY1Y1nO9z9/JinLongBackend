@@ -16,7 +16,7 @@ class ProductsType extends Model
     /**
      * @var array
      */
-    protected $fillable = ['type_name_en', 'type_name_ch'];
+    protected $fillable = ['type_name_en', 'type_name_ch','img','sort'];
 
     public function Product()
     {

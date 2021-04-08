@@ -19,16 +19,20 @@
                         <table id="example" class="table table-striped table-bordered" style="width:100%">
                             <thead>
                             <tr>
+                                <th>產品圖片</th>
                                 <th>類型名稱(中)</th>
                                 <th>類型名稱(英)</th>
+                                <th>Sort</th>
                                 <th width="80">功能</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($items as $item)
                                 <tr>
+                                    <td><img src="{{$item->img}}" width="200" alt=""></td>
                                     <td>{{$item->type_name_ch}}</td>
                                     <td>{{$item->type_name_en}}</td>
+                                    <td>{{$item->sort}}</td>
                                     <td>
                                         <a class="btn btn-primary btn-sm" href="/admin/product_type/edit/{{$item->id}}">編輯</a>
                                         <a class="btn btn-danger  btn-sm" href="#" data-itemid="{{$item->id}}" href="">刪除</a>
