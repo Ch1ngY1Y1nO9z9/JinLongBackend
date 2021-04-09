@@ -17,7 +17,7 @@
 
 @section('content')
 <div class="container h-100">
-    <div class="row justify-content-md-center h-100">
+    <div class="row justify-content-center h-100">
         <div class="card-wrapper">
             <div class="brand">
                 <img src="/img/OAOLOGO.png" alt="logo">
