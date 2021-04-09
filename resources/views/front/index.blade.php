@@ -1,19 +1,20 @@
 @extends('layouts.template')
 
-@section('css')
-
-{{-- google recaptcha v3 --}}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://www.google.com/recaptcha/api.js?render=6LcIJKMaAAAAAH7WbZzMm_RWopikwrF67vTfYejn"></script>
-<script>
-    grecaptcha.ready(function() {
-    grecaptcha.execute('6LcIJKMaAAAAAH7WbZzMm_RWopikwrF67vTfYejn', {action: 'homepage'}).then(function(token) {
-      var recaptchaResponse = document.getElementById('recaptchaResponse');
-      recaptchaResponse.value = token;
+@section('recaptcha')
+    {{-- google recaptcha v3 --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcIJKMaAAAAAH7WbZzMm_RWopikwrF67vTfYejn"></script>
+    <script>
+        grecaptcha.ready(function() {
+        grecaptcha.execute('6LcIJKMaAAAAAH7WbZzMm_RWopikwrF67vTfYejn', {action: 'homepage'}).then(function(token) {
+        var recaptchaResponse = document.getElementById('recaptchaResponse');
+        recaptchaResponse.value = token;
+        });
     });
-});
-</script>
+    </script>
+@endsection
 
+@section('css')
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <link rel="stylesheet" href="/css/index.css">
 
@@ -129,6 +130,7 @@
                                 <span class="input-group-text">訊息:</span>
                                 <textarea class="form-control" aria-label="With textarea" name="content" height="300px" required></textarea>
                             </div>
+                            <input type="hidden" value="" name="recaptcha_response" id="recaptchaResponse">
 
                             <button class="btn form_button" type="submit">送出</button>
                         </form>
