@@ -15,7 +15,6 @@
     @yield('css')
 
     <style>
-
         @media(max-width:991px) {
             header .left_side .logo a img {
                 width: 100px;
@@ -28,6 +27,13 @@
             }
         }
 
+        .backToTop {
+            width: 60px;
+            height: 60px;
+            padding: 0;
+            box-shadow: 0 4px 8px rgb(0 0 0 / 5%);
+            display: flex
+        }
     </style>
 
 </head>

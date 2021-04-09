@@ -9,7 +9,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">banner - 編輯</div>
+                <div class="card-header">首頁橫幅 - 編輯</div>
 
                 <div class="card-body">
                     <form method="post" action="/admin/banner/update/{{$items->id}}" enctype="multipart/form-data">
@@ -19,15 +19,15 @@
                             <div class="col-sm-10 mb-3">
                                 <img width="200px" src="{{$items->img}}" alt="">
                             </div>
-                            <label for="img" class="col-sm-2 col-form-label">電腦版banner <br><small
-                                    class="text-danger">*建議圖片尺寸1140px(寬)*1140px(高)</small></label>
+                            <label for="img" class="col-sm-2 col-form-label">上傳新圖片<br><small
+                                    class="text-danger">*建議圖片尺寸1900px(寬)*600px(高)</small></label>
                             <div class="col-sm-10">
                                 <input type="file" class="form-control" id="img" value="" name="img">
                             </div>
                         </div>
                         <hr>
                         <div class="form-group row">
-                            <label for="alt" class="col-sm-2 col-form-label">alt</label>
+                            <label for="alt" class="col-sm-2 col-form-label">替代文字</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="alt" value="{{$items->alt}}" name="alt" required>
                             </div>
@@ -36,7 +36,7 @@
                         <hr>
 
                         <div class="form-group row">
-                            <label for="sort" class="col-sm-2 col-form-label">排序(sort)</label>
+                            <label for="sort" class="col-sm-2 col-form-label">排序</label>
                             <div class="col-sm-10">
                                 <input type="number" class="form-control" id="sort" name="sort" value="{{$items->sort}}" required><br>
                                 <small class="text-danger">數字越大,排序越前面</small>

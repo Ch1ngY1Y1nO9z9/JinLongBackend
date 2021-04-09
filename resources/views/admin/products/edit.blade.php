@@ -22,11 +22,11 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="img" class="col-2 col-form-label">上傳圖片</label>
+                                <label for="img" class="col-2 col-form-label">上傳新圖片</label>
                                 <div class="col-10">
                                     <input type="file" class="form-control-file" id="img" name="img">
                                 </div>
-                                <div class="col-12"><small class="text-danger">*注意：建議尺寸：540 * 290 (px)</small></div>
+                                <div class="col-12"><small class="text-danger">*注意：建議尺寸：300 * 200 (px)</small></div>
                             </div>
 
                             <hr>
@@ -72,7 +72,7 @@
                             <hr>
 
                             <div class="form-group row">
-                                <label for="sort" class="col-2 col-form-label">權重</label>
+                                <label for="sort" class="col-2 col-form-label">排序</label>
                                 <div class="col-10">
                                     <input type="number" class="form-control" id="sort" name="sort" required min="0" max="999" value="{{$item->sort}}">
                                 </div>

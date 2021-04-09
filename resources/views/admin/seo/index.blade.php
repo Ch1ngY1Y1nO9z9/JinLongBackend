@@ -31,7 +31,7 @@
                             </div>
                             <hr>
                             <div class="offset-5 col-2 text-center">
-                                <button class="btn btn-success btn-sm">更新</button>
+                                <button class="btn btn-success">更新</button>
                             </div>
                         </form>
                     </div>

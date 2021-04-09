@@ -117,7 +117,7 @@
                                 <textarea class="form-control" aria-label="With textarea" name="content" height="300px" required></textarea>
                             </div>
 
-                            <button class="btn form_button" type="submit">＞</button>
+                            <button class="btn form_button" type="submit">送出</button>
                         </form>
                         <p>正龍塑膠廠股份有限公司</p>
                         <p>統一編號:22600859</p>
@@ -134,7 +134,9 @@
             </div>
         </section>
         <a class="backToTop" href="#">
-            ↑
+            <span class="m-auto">
+                ↑
+            </span>
         </a>
     </main>
 @endsection

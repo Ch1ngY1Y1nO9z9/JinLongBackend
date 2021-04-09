@@ -22,7 +22,7 @@
                                 <th>產品圖片</th>
                                 <th>類型名稱(中)</th>
                                 <th>類型名稱(英)</th>
-                                <th>Sort</th>
+                                <th>排序</th>
                                 <th width="80">功能</th>
                             </tr>
                             </thead>

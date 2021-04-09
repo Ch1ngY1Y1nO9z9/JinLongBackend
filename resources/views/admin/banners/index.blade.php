@@ -9,7 +9,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">首頁banner管理</div>
+                    <div class="card-header">首頁橫幅管理</div>
 
                     <div class="card-body">
                         <a class="btn btn-success" href="/admin/banner/create">新增</a>
@@ -18,9 +18,9 @@
                         <table id="example" class="table table-striped table-bordered" style="width:100%">
                             <thead>
                             <tr>
-                                <th>banner</th>
-                                <th>alt</th>
-                                <th>Sort</th>
+                                <th>橫幅圖片</th>
+                                <th>替代圖片</th>
+                                <th>排序</th>
                                 <th>功能</th>
                             </tr>
                             </thead>

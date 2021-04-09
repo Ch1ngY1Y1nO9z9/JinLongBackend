@@ -64,22 +64,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" defer></script> --}}
 <script>
     $(document).ready(function() {
-        var table = $('#example').DataTable({
-            "order": [[0,'desc']],
-            buttons: [
-                    {
-                        extend:"excel",
-                        text: '匯出為Excel',
-                        exportOptions: {
-                            columns: [ 0, 1, 2, 3, 4, 5],
-                        },
-                        filename: function(){
-                            var d = new Date().toISOString().substring(0, 6);
-                            return '正龍塑膠-' + d;
-                        },
+            $('#example').DataTable({
+                order: [[ 2, 'desc' ]],
+                language:{
+                    "processing":   "處理中...",
+                    "loadingRecords": "載入中...",
+                    "lengthMenu":   "顯示 _MENU_ 項結果",
+                    "zeroRecords":  "沒有符合的結果",
+                    "info":         "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
+                    "infoEmpty":    "顯示第 0 至 0 項結果，共 0 項",
+                    "infoFiltered": "(從 _MAX_ 項結果中過濾)",
+                    "infoPostFix":  "",
+                    "search":       "搜尋:",
+                    "paginate": {
+                        "first":    "第一頁",
+                        "previous": "上一頁",
+                        "next":     "下一頁",
+                        "last":     "最後一頁"
+                    },
+                    "aria": {
+                        "sortAscending":  ": 升冪排列",
+                        "sortDescending": ": 降冪排列"
                     }
-                ]
-        });
+                }
+            });
         // table.buttons().container().appendTo( '#table_wrapper .col-md-6:eq(0)');
 
         $('#example').on('click','.btn-danger',function(){

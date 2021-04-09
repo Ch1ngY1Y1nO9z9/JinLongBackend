@@ -23,7 +23,7 @@
                                 <th>標題(中)</th>
                                 <th>標題(英)</th>
                                 <th>日期</th>
-                                <th>Sort</th>
+                                <th>排序</th>
                                 <th width="80">功能</th>
                             </tr>
                             </thead>

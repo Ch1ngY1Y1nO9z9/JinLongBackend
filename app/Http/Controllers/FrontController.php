@@ -32,14 +32,15 @@ class FrontController extends Controller
         return view('front.index_en',compact('banners','all_news','productTypes'));
     }
 
-    public function products($type) {
 
-    }
-
-    public function news($id) {
+    public function news($lang,$id) {
         $news = News::find($id);
 
-        return view('front.news',compact('news'));
+        if($lang == 'ch'){
+            return view('front.news_ch',compact('news'));
+        }
+
+        return view('front.news_en',compact('news'));
     }
 
     public function Types($lang,$id) {

@@ -15,7 +15,7 @@
 <main>
     <div class="container">
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
+            <ol class="breadcrumb my-3">
                 <li class="breadcrumb-item">Products</li>
                 <li class="breadcrumb-item active" aria-current="page">{{$type->type_name_en}}</li>
             </ol>

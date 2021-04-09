@@ -22,7 +22,7 @@ Route::get('/ch', 'FrontController@index');
 Route::get('/en', 'FrontController@index_en');
 Route::post('/contact_us', 'FrontController@contact_us');
 
-Route::get('/news/{id}', 'FrontController@news');
+Route::get('/news/{lang}/{id}', 'FrontController@news');
 Route::get('/Types/{lang}/{id}', 'FrontController@Types');
 
 // Auth::routes();
@@ -32,8 +32,8 @@ Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // Registration Routes...
-Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::post('register', 'Auth\RegisterController@register');
+// Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+// Route::post('register', 'Auth\RegisterController@register');
 
 // Password Reset Routes...
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');

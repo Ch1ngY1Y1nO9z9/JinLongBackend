@@ -32,13 +32,14 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    @if(Auth::check())
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="/admin/seo">SEO管理</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin/banner">Banner管理</a>
+                            <a class="nav-link" href="/admin/banner">首頁橫幅管理</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/admin/news">最新消息管理</a>
@@ -56,7 +57,7 @@
                             <a class="nav-link" href="/admin/contact">聯絡我們管理</a>
                         </li>
                     </ul>
-
+                    @endif
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
