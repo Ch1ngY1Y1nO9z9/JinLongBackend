@@ -23,6 +23,7 @@ Route::get('/en', 'FrontController@index_en');
 Route::post('/contact_us', 'FrontController@contact_us');
 
 Route::get('/news/{id}', 'FrontController@news');
+Route::get('/Types/{lang}/{id}', 'FrontController@Types');
 
 // Auth::routes();
 // Authentication Routes...

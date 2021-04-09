@@ -2,7 +2,7 @@
 
 @section('css')
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<link rel="stylesheet" href="./css/index.css">
+<link rel="stylesheet" href="/css/index.css">
 
 <style>
     main #news .container .link .news_pic {
@@ -34,7 +34,7 @@
                             <span class="title">
                                 關於正龍
                             </span>
-                            <img width="100%" class="lazy" data-src="./img/about_us.jpg" src="./img/about_us.jpg">
+                            <img width="100%" class="lazy" data-src="/img/about_us.jpg" src="/img/about_us.jpg">
                         </div>
                     </div>
                     <div class="col-12 col-md-9">
@@ -56,7 +56,7 @@
                         最新消息
                     </span>
                     @foreach ($all_news as $news)
-                        <a class="link" href="/news/{{$news->id}}">
+                        <a class="link" href="/news/ch/{{$news->id}}">
                             <div class="news_pic lazy" data-bg="{{$news->img}}" style="background-image: url({{$news->img}});"></div>
                             <div class="news_title">{{$news->date}} {{$news->title_ch}}</div>
                         </a>
@@ -76,7 +76,7 @@
                     <div class="products">
                         <div class="row">
                             @foreach ($productTypes as $type)
-                                <a href="/Types/{{$type->id}}" class="product">
+                                <a href="/Types/ch/{{$type->id}}" class="product">
                                     <div class="product_pic">
                                         <div class="h-100 w-100 lazy" data-bg="{{$type->img}}" style="background-image: url({{$type->img}});"></div>
                                     </div>

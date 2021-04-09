@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Banners;
 use App\ContactUs;
 use App\News;
+use App\Products;
 use App\ProductsType;
 use Illuminate\Http\Request;
 
@@ -39,6 +40,16 @@ class FrontController extends Controller
         $news = News::find($id);
 
         return view('front.news',compact('news'));
+    }
+
+    public function Types($lang,$id) {
+        $type = ProductsType::find($id);
+        $products = Products::where('type',$type->id)->orderBy('sort','desc')->get();
+
+        if($lang == 'ch'){
+            return view('front.product_ch',compact('type','products'));
+        }
+        return view('front.product_en',compact('type','products'));
     }
 
     public function contact_us(Request $request) {

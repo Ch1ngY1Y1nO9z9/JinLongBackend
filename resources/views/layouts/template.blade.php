@@ -21,8 +21,8 @@
                 <div class="row">
                     <div class="left_side col-6 col-md-4">
                         <div class="logo">
-                            <a class="w-100" href="#">
-                                <img width="100%" class="lazy" data-src="./img/logo.png" src="./img/logo.png" alt="正龍塑膠">
+                            <a class="w-100" href="/ch">
+                                <img width="100%" class="lazy" data-src="/img/logo.png" src="/img/logo.png" alt="正龍塑膠">
                                 <span>
                                     正龍塑膠
                                 </span>
@@ -33,16 +33,16 @@
                         <div class="d-none d-md-block h-100">
                             <ul class="p-0 m-0 links row">
                                 <li class="link col">
-                                    <a href="#about_us">關於正龍</a>
+                                    <a href="/ch#about_us">關於正龍</a>
                                 </li>
                                 <li class="link col">
-                                    <a href="#news">最新消息</a>
+                                    <a href="/ch#news">最新消息</a>
                                 </li>
                                 <li class="link col">
-                                    <a href="#products">產品介紹</a>
+                                    <a href="/ch#products">產品介紹</a>
                                 </li>
                                 <li class="link col">
-                                    <a href="#contact_us">聯絡我們</a>
+                                    <a href="/ch#contact_us">聯絡我們</a>
                                 </li>
                                 <li class="link col">
                                     <a href="/en">中/英</a>

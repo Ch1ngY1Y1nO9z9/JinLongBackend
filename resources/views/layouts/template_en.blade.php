@@ -11,6 +11,22 @@
 
     @yield('css')
 
+    <style>
+
+        @media(max-width:991px) {
+            header .left_side .logo a img {
+                width: 100px;
+            }
+        }
+
+        @media(max-width:767px) {
+            header .left_side .logo a img {
+                width: 50px;
+            }
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -21,10 +37,10 @@
                 <div class="row">
                     <div class="left_side col-6 col-md-4">
                         <div class="logo">
-                            <a class="w-100" href="#">
-                                <img width="100%" class="lazy" data-src="./img/logo.png" src="./img/logo.png" alt="正龍塑膠">
+                            <a class="w-100" href="/en">
+                                <img width="100%" class="lazy" data-src="/img/logo.png" src="/img/logo.png" alt="正龍塑膠">
                                 <span>
-                                    正龍塑膠
+                                    ZHENG LONG
                                 </span>
                             </a>
                         </div>
@@ -36,13 +52,13 @@
                                     <a href="#about_us">ABOUT</a>
                                 </li>
                                 <li class="link col">
-                                    <a href="#news">NEWS</a>
+                                    <a href="/en#news">NEWS</a>
                                 </li>
                                 <li class="link col">
-                                    <a href="#products">PRODUCTS</a>
+                                    <a href="/en#products">PRODUCTS</a>
                                 </li>
                                 <li class="link col">
-                                    <a href="#contact_us">CONTACT</a>
+                                    <a href="/en#contact_us">CONTACT</a>
                                 </li>
                                 <li class="link col">
                                     <?php $lan = $_SERVER['REQUEST_URI']; ?>
