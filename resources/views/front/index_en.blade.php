@@ -119,11 +119,11 @@
 
                             <button class="btn form_button" type="submit">send</button>
                         </form>
-                        <p>ZHENG LONG PLASTICS FACTORY CO.</p>
-                        <p>VAT Number: 22600859</p>
-                        <p>TEL: 04-22703754</p>
-                        <p>FAX: 04-22766553</p>
-                        <p>EMAIL:</p>
+                        ZHENG LONG PLASTICS FACTORY CO.<br>
+                        VAT Number: 22600859<br>
+                        TEL: 04-22703754<br>
+                        FAX: 04-22766553<br>
+                        EMAIL:<br>
                     </div>
                     <div class="col-12 col-md-6">
                         <iframe

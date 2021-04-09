@@ -119,11 +119,11 @@
 
                             <button class="btn form_button" type="submit">送出</button>
                         </form>
-                        <p>正龍塑膠廠股份有限公司</p>
-                        <p>統一編號:22600859</p>
-                        <p>電話:04-22703754</p>
-                        <p>傳真:04-22766553</p>
-                        <p>信箱:</p>
+                        正龍塑膠廠股份有限公司<br>
+                        統一編號:22600859<br>
+                        電話:04-22703754<br>
+                        傳真:04-22766553<br>
+                        信箱:<br>
                     </div>
                     <div class="col-12 col-md-6">
                         <iframe

@@ -123,7 +123,7 @@
     <footer>
         <div class="container">
             <div class="footer_info">
-                411 臺中市太平區太平里合利街8號 Tel:04-2270-3754 Copyright © 2021 正龍塑膠廠股份有限公司 All Rights Reserved
+                411 臺中市太平區太平里合利街8號 Tel:04-2270-3754<br>Copyright © 2021 正龍塑膠廠股份有限公司 All Rights Reserved
             </div>
         </div>
     </footer>

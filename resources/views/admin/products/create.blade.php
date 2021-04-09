@@ -29,7 +29,7 @@
                             <div class="form-group row">
                                 <label class="col-2" for="type">產品分類</label>
                                 <div class="col-10">
-                                    <select multiple class="form-control" id="type" name="type">
+                                    <select class="form-control" id="type" name="type">
                                         @foreach($types as $index => $type)
                                             <option value="{{$type->id}}" @if($index == 1)selected @endif>{{$type->type_name_ch}}</option>
                                         @endforeach
