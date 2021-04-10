@@ -428,8 +428,8 @@ footer .footer_info {
   text-decoration: none;
   position: fixed;
   z-index: 10;
-  right: 30px;
-  bottom: 30px;
+  right: 6px;
+  bottom: 90px;
   -webkit-transition: .3s;
   transition: .3s;
 }
