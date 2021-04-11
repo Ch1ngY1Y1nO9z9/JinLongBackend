@@ -161,6 +161,9 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 5000,
+            },
             autoHeight: true, //enable auto height
             lazy: true, // lazyload
         });
