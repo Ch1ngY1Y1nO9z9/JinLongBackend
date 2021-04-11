@@ -54,8 +54,8 @@
                     <div class="col-12 col-md-9">
                         <div class="text">
                             <p>
-                                正龍塑膠廠股份有限公司創立於民國六十九年，為一家生產束線帶之專業製造工廠，從塑膠模具設計到產品射出成形一貫作業，產品品質優良，深受客戶青睞。<br>
-                                除了主力專業製造配線用之束線帶外，更致力於周邊產品的開發應用，如束線帶固定座，塑膠瓶蓋，塑膠拉環．．．等，歡迎OEM/ODM。
+                                Zheng long Plastics Factory Co., Ltd. was founded in 1989. It is a professional manufacturer of cable ties. From plastic mold design to product injection molding, it has been operating consistently. The products are of high quality and are well received by customers.<br>
+                                In addition to the main professional manufacturing of cable ties for wiring, it is also committed to the development and application of peripheral products, such as cable ties holders, plastic bottle caps, mineral water handles... etc. OEM/ODM are welcome.
                             </p>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                         VAT Number: 22600859<br>
                         TEL: 04-22703754<br>
                         FAX: 04-22766553<br>
-                        EMAIL:<br>
+                        EMAIL: zl@zl-cabletie.com<br>
                     </div>
                     <div class="col-12 col-md-6">
                         <iframe

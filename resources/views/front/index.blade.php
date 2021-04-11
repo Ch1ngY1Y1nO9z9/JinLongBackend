@@ -138,7 +138,7 @@
                         統一編號:22600859<br>
                         電話:04-22703754<br>
                         傳真:04-22766553<br>
-                        信箱:<br>
+                        信箱: zl@zl-cabletie.com<br>
                     </div>
                     <div class="col-12 col-md-6">
                         <iframe
