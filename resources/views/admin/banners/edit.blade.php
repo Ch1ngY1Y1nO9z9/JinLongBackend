@@ -20,7 +20,7 @@
                                 <img width="200px" src="{{$items->img}}" alt="">
                             </div>
                             <label for="img" class="col-sm-2 col-form-label">上傳新圖片<br><small
-                                    class="text-danger">*建議圖片尺寸1900px(寬)*600px(高)</small></label>
+                                    class="text-danger">*建議圖片尺寸1920px(寬)*730px(高)</small></label>
                             <div class="col-sm-10">
                                 <input type="file" class="form-control" id="img" value="" name="img">
                             </div>
