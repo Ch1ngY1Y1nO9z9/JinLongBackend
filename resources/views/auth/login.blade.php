@@ -53,3 +53,13 @@
     </div>
 </div>
 @endsection
+
+@section('js')
+
+    @if (Session::has('success'))
+        <script>
+            alert('密碼更新成功! 請重新登入!')
+        </script>
+    @endif
+
+@endsection
