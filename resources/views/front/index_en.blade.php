@@ -23,6 +23,21 @@
         background-size: cover;
         background-position: center;
     }
+
+    main #news .container .link .news_title {
+        width: calc(100% - 120px);
+    }
+
+    @media(max-width: 575px) {
+        main #news .container .link .news_pic {
+            width: 90px;
+            height: 90px;
+        }
+
+        main #news .container .link .news_title {
+            width: calc(100% - 90px);
+        }
+    }
 </style>
 @endsection
 
