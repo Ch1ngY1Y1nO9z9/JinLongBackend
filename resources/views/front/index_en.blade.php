@@ -34,9 +34,6 @@
             height: 90px;
         }
 
-        main #news .container .link .news_title {
-            width: calc(100% - 90px);
-        }
     }
 </style>
 @endsection
