@@ -38,8 +38,8 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 // Password Reset Routes...
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
-Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
-Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+// Route::get('password/reset', 'Auth\ResetPasswordController@showResetForm');
+// Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::get('/admin', 'HomeController@index')->name('home');
 
@@ -47,6 +47,9 @@ Route::get('/admin', 'HomeController@index')->name('home');
 // 網站後台
 Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/', 'HomeController@index');
+
+    Route::get('/resetPassword', "HomeController@resetPassword");
+    Route::post('/resetPassword', "HomeController@reset");
 
     //SEO設定
     Route::get('seo', 'SeoController@index');
