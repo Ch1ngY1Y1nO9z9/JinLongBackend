@@ -85,7 +85,7 @@
                     @foreach ($all_news as $news)
                         <a class="link" href="/news/ch/{{$news->id}}">
                             <div class="news_pic lazy" data-bg="{{$news->img}}" style="background-image: url({{$news->img}});"></div>
-                            <div class="news_title">{{$news->date}} {{$news->title_ch}}</div>
+                            <div class="news_title">{{$news->title_ch}}</div>
                         </a>
                     @endforeach
                 </div>
