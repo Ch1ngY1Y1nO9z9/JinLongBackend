@@ -1,17 +1,7 @@
 @extends('layouts.template')
 
 @section('recaptcha')
-    {{-- google recaptcha v3 --}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=6LcIJKMaAAAAAH7WbZzMm_RWopikwrF67vTfYejn"></script>
-    <script>
-        grecaptcha.ready(function() {
-        grecaptcha.execute('6LcIJKMaAAAAAH7WbZzMm_RWopikwrF67vTfYejn', {action: 'homepage'}).then(function(token) {
-        var recaptchaResponse = document.getElementById('recaptchaResponse');
-        recaptchaResponse.value = token;
-        });
-    });
-    </script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 @endsection
 
 @section('css')
@@ -143,8 +133,8 @@
                                 <span class="input-group-text">訊息:</span>
                                 <textarea class="form-control" aria-label="With textarea" name="content" height="300px" required></textarea>
                             </div>
-                            <input type="hidden" value="" name="recaptcha_response" id="recaptchaResponse">
 
+                            <div class="mt-3 g-recaptcha" data-sitekey="6LfJjvMfAAAAAJns6znQ3dAh2QFC2ryo3h5fK9SA"></div>
                             <button class="btn form_button" type="submit">送出</button>
                         </form>
                         正龍塑膠廠股份有限公司<br>
