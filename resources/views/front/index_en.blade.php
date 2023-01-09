@@ -141,7 +141,6 @@
                         TEL: 04-22703754<br>
                         FAX: 04-22766553<br>
                         EMAIL: zl@zl-cabletie.com<br>
-                        LINE_ID: 0918222859<br>
                     </div>
                     <div class="col-12 col-md-6">
                         <iframe
