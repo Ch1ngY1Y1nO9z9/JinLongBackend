@@ -142,7 +142,6 @@
                         電話:04-22703754<br>
                         傳真:04-22766553<br>
                         信箱: zl@zl-cabletie.com<br>
-                        LINE_ID: 0918222859<br>
                     </div>
                     <div class="col-12 col-md-6">
                         <iframe
